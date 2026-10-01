@@ -65,13 +65,13 @@ ARCHITECTURE a OF clockDivider IS
 	-- together with the six divide by ten stages below gives 25,000,000.
 	-- Set it to 1 for simulation so that a tick arrives in microseconds
 	-- instead of in a tenth of a second.
-	CONSTANT firstStage : INTEGER := 25;
+	CONSTANT firstStage : INTEGER := 2;    -- 25 for the board, 2 for simulation
 
 	-- Each of the six stages below divides by two times (rippleTop + 1).
 	-- 4 gives the divide by ten of the provided file. 0 gives divide by two,
 	-- which shrinks the six stages from a million down to sixty four and
 	-- makes a top level simulation finish in microseconds.
-	CONSTANT rippleTop : INTEGER := 4;
+	CONSTANT rippleTop : INTEGER := 0;     -- 4 for the board, 0 for simulation
 
 	SIGNAL	count_1Mhz: STD_LOGIC_VECTOR(4 DOWNTO 0) := "00000"; 
 	SIGNAL	count_100Khz, count_10Khz, count_1Khz : STD_LOGIC_VECTOR(2 DOWNTO 0) := "000";
