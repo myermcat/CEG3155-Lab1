@@ -2,3 +2,4 @@ work/
 *.fst
 *.vcd
 .DS_Store
+*.fst.hier
