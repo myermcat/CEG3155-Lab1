@@ -21,7 +21,7 @@ BEGIN
 
   -- the divider provided with the course. Only its slowest output is used,
   -- the rest are left unconnected.
-  divider: ENTITY work.clk_div(a)
+  divider: ENTITY work.clockDivider(a)
     PORT MAP ( clock_25Mhz  => i_GClock,
                clock_1MHz   => OPEN,
                clock_100KHz => OPEN,
